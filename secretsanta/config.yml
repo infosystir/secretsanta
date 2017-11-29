@@ -9,11 +9,10 @@ PASSWORD:
 TIMEZONE: 'US/Pacific'
 
 PARTICIPANTS:
-  - Amanda <amanda.c.berlin@gmail.com>
-  - Michael <mike.berlin2002@gmail.com>
-  - James <james.k.berlin@gmail.com>
-  - Wyatt <wyatt.x.berlin@gmail.com>
-
+  - Chad <chad@somewhere.net>
+  - Jen <jen@gmail.net>
+  - Bill <Bill@somedomain.net>
+  - Sharon <Sharon@hi.org>
 
 # Warning -- if you mess this up you could get an infinite loop
 DONT-PAIR:
