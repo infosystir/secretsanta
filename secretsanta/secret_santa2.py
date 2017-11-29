@@ -48,9 +48,9 @@ CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config2.yml')
 class Person:
     def __init__(self, name, handle, email, address, invalid_matches):
         self.name = name
-	self.handle = handle
+        self.handle = handle
         self.email = email
-	self.address = address
+        self.address = address
         self.invalid_matches = invalid_matches
     
     def __str__(self):
@@ -125,7 +125,7 @@ def main(argv=None):
         
         givers = []
         for person in participants:
-            name, handle, email, address = re.match(r'(?:(\w+|\W+)\s*){1,4};([a-zA-Z0-9_.+-///\])\w+;<([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)>;"(.*?)"', person).groups()
+            name, handle, email, address = person.split(';')
             name = name.strip()
 	    handle = handle.strip()
 	    email = email.strip()
