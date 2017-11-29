@@ -4,7 +4,7 @@ SMTP_SERVER: smtp.gmail.com
 #SMTP_PORT: 587
 SMTP_PORT: 25
 USERNAME: amanda.c.berlin@gmail.com
-PASSWORD: "hbkrhmfrogbqabbf"
+PASSWORD: 
 
 TIMEZONE: 'US/Pacific'
 
