@@ -3,17 +3,27 @@
 SMTP_SERVER: smtp.gmail.com
 #SMTP_PORT: 587
 SMTP_PORT: 25
-USERNAME: amanda.c.berlin@gmail.com
+USERNAME: myemail@gmail.com
 PASSWORD: "pass"
 
 TIMEZONE: 'US/Pacific'
 
 PARTICIPANTS:
-Aaron Test;testile;<amanda.c.berlin@gmail.com>;"394839 blah st, NC 123345"
-Aaron Aasdfas;aaron_asdfasdf;<test.email3@gmail.com>;"039823 main st Urbandale IA 50322"
-Adam H;Hoppinghping;<test.email2@gmail.com>;"235092834 church, Clinton Township, MI 48036"
-Alex TEst;Alex____;<test.email@gmail.com>;"99999 test drive, Sandy Springs, GA 30350"
-
+---
+  - name: Zach 0
+  - handle: test0
+  - email: test0@gmail.com
+  - address: 11111 beach ave San Diego, CA  92126 United States
+---
+  - name: Zach 1
+  - handle: test1
+  - email: test1@gmail.com
+  - address: 29403 buffalo, st Iowa, 52241
+---
+  - name: Zach 2
+  - handle: test2
+  - email: test2@gmail.com
+  - address: 102324 test rd, CA  92126 United States
 # Warning -- if you mess this up you could get an infinite loop
 DONT-PAIR:
   - Chad, Jen    # Chad and Jen are married
@@ -21,7 +31,7 @@ DONT-PAIR:
 ##  - Bill, Sharon
 
 # From address should be the organizer in case participants have any questions
-FROM: You <amanda.c.berlin@gmail.com>
+FROM: You <myemail@gmail.com>
 
 # Both SUBJECT and MESSAGE can include variable substitution for the 
 # "santa" and "santee"
