@@ -125,7 +125,7 @@ def main(argv=None):
         
         givers = []
         for person in participants:
-            name, handle, email, address = re.match(r'(?:(\w+|\W+)\s*){1,4};([a-zA-Z0-9_.+-///\])\w+;<([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)>;"(.*?)"', person).groups()
+            name, handle, email, address = person.split(';')
             name = name.strip()
 	    handle = handle.strip()
 	    email = email.strip()
