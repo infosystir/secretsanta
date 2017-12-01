@@ -43,16 +43,18 @@ Subject: {subject}
         
 """
 
-CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config.yml')
+CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config2round2.yml')
 
 class Person:
-    def __init__(self, name, email, invalid_matches):
+    def __init__(self, name, handle, email, address, invalid_matches):
         self.name = name
+	self.handle = handle
         self.email = email
+	self.address = address
         self.invalid_matches = invalid_matches
     
     def __str__(self):
-        return "%s <%s>" % (self.name, self.email)
+        return "%s <%s>" % (self.name, self.handle, self.email, self.address)
 
 class Pair:
     def __init__(self, giver, reciever):
@@ -123,8 +125,11 @@ def main(argv=None):
         
         givers = []
         for person in participants:
-            name, email = re.match(r'([^<]*)<([^>]*)>', person).groups()
+            name, handle, email, address = person.split(';')
             name = name.strip()
+	    handle = handle.strip()
+	    email = email.strip()
+	    address = address.strip()
             invalid_matches = []
             for pair in dont_pair:
                 names = [n.strip() for n in pair.split(',')]
@@ -133,7 +138,7 @@ def main(argv=None):
                     for member in names:
                         if name != member:
                             invalid_matches.append(member)
-            person = Person(name, email, invalid_matches)
+            person = Person(name, handle, email, address, invalid_matches)
             givers.append(person)
         
         recievers = givers[:]
@@ -171,6 +176,9 @@ call with the --send argument:
                 subject=subject,
                 santa=pair.giver.name,
                 santee=pair.reciever.name,
+		santeemail=pair.reciever.email,
+		santeehandle=pair.reciever.handle,
+		santeeaddr=pair.reciever.address,
             )
             if send:
                 result = server.sendmail(frm, [to], body)
