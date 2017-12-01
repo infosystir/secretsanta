@@ -35,10 +35,11 @@ Here is the example configuration unchanged:
 
     PARTICIPANTS:
 #Make sure there is no unicode here or other symbols that freak out yaml. Also remember that if sending fails partially through, they've all been randomized so you can't just re-run it again.
-      - Jon Smith;handle;<jon.smith@gmail.com>;"123 test st, maintown ohio 12345 USA"
-      - Jane Smith;handle;<jane.smith@gmail.com>;"234 test st, maintown ohio 12345 USA"
-      - Jill Smith;handle;<jill.smith@gmail.com>;"345 test st, maintown ohio 12345 USA"
-      - Joe Smith;handle;<joe.smith@gmail.com>;"456 test st, maintown ohio 12345 USA"
+
+- Jon Smith;handle;<jon.smith@gmail.com>;"123 test st, maintown ohio 12345 USA"
+- Jane Smith;handle;<jane.smith@gmail.com>;"234 test st, maintown ohio 12345 USA"
+- Jill Smith;handle;<jill.smith@gmail.com>;"345 test st, maintown ohio 12345 USA"
+- Joe Smith;handle;<joe.smith@gmail.com>;"456 test st, maintown ohio 12345 USA"
 
     # Warning -- if you mess this up you could get an infinite loop
     DONT-PAIR:
