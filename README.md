@@ -47,11 +47,10 @@ Here is the example configuration unchanged:
       - Chad, Bill   # Chad and Bill are best friends
       - Bill, Sharon
 
-  # From address should be the organizer in case participants have any questions
+  #From address should be the organizer in case participants have any questions
     FROM: You <you@gmail.net>
 
-  # Both SUBJECT and MESSAGE can include variable substitution for the 
-  # "santa", "santee", "santeehandle", and "santeeaddr"
+  #Both SUBJECT and MESSAGE can include variable substitution for the "santa", "santee", "santeehandle", and "santeeaddr"
     SUBJECT: Your secret santa recipient is {santee}
     MESSAGE: 
   Dear {santa},
@@ -122,3 +121,5 @@ Things to Add
 1. Error handling
 2. Cache matches so if script bombs, you don't have to manually match the rest
 3. export pairs to csv
+4. Unicode parsing
+5. Maybe don't use YAML?
